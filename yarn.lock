@@ -188,6 +188,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bnb-chain/greenfield-contracts-sdk@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@bnb-chain/greenfield-contracts-sdk@npm:1.1.0"
+  dependencies:
+    "@bnb-chain/greenfield-contracts": 1.1.0
+    "@openzeppelin/contracts": ^4.9.3
+    "@openzeppelin/contracts-upgradeable": ^4.9.3
+  checksum: 05f0555a54d5b47651485886adc7eaf22310758c5c9f9aab0e58ea52f0dc6108205d09f41d78b7e1396a05d3be0292d0fbe98b13b9e1664c5b9ff76184aab9d5
+  languageName: node
+  linkType: hard
+
+"@bnb-chain/greenfield-contracts@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@bnb-chain/greenfield-contracts@npm:1.1.0"
+  dependencies:
+    "@openzeppelin/contracts": 4.9.3
+    "@openzeppelin/contracts-upgradeable": 4.9.3
+  checksum: e9d86c973793d157ae2ba933f21878761fe6e222c40d9255ae980f4447c6d1da9654a9a2fb33031e629872564a7d298d735d18acdef3963efad625f96d240e26
+  languageName: node
+  linkType: hard
+
+"@bnb-chain/greenfield-contracts@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@bnb-chain/greenfield-contracts@npm:1.2.0"
+  dependencies:
+    "@openzeppelin/contracts": 4.9.3
+    "@openzeppelin/contracts-upgradeable": 4.9.3
+  checksum: 060faebb656fd6de3e6a51d8382391879e431df1e3a5cae9d44d85e0919204084d245f940abcc0a253eae71162641ff985e5606a49170e15415700ccbaa8de2f
+  languageName: node
+  linkType: hard
+
 "@coinbase/wallet-sdk@npm:^3.6.6":
   version: 3.9.3
   resolution: "@coinbase/wallet-sdk@npm:3.9.3"
@@ -1191,6 +1222,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openzeppelin/contracts-upgradeable@npm:4.9.3":
+  version: 4.9.3
+  resolution: "@openzeppelin/contracts-upgradeable@npm:4.9.3"
+  checksum: bda0240b1d44c913ec5a4e109c622f216c2bbd7b468d210822f75782a5f7fe0609d08bf03b78b253333625e99e507cf2f75212f1de3b274bd9fc64ae967aeec3
+  languageName: node
+  linkType: hard
+
+"@openzeppelin/contracts-upgradeable@npm:^4.9.3":
+  version: 4.9.6
+  resolution: "@openzeppelin/contracts-upgradeable@npm:4.9.6"
+  checksum: 481075e7222cab025ae55304263fca69a2d04305521957bc16d2aece9fa2b86b6914711724822493e3d04df7e793469cd0bcb1e09f0ddd10cb4e360ac7eed12a
+  languageName: node
+  linkType: hard
+
+"@openzeppelin/contracts@npm:4.9.3":
+  version: 4.9.3
+  resolution: "@openzeppelin/contracts@npm:4.9.3"
+  checksum: 4932063e733b35fa7669b9fe2053f69b062366c5c208b0c6cfa1ac451712100c78acff98120c3a4b88d94154c802be05d160d71f37e7d74cadbe150964458838
+  languageName: node
+  linkType: hard
+
+"@openzeppelin/contracts@npm:^4.9.3":
+  version: 4.9.6
+  resolution: "@openzeppelin/contracts@npm:4.9.6"
+  checksum: 274b6e968268294f12d5ca4f0278f6e6357792c8bb4d76664f83dbdc325f780541538a127e6a6e97e4f018088b42f65952014dec9c745c0fa25081f43ef9c4bf
+  languageName: node
+  linkType: hard
+
 "@parcel/watcher-android-arm64@npm:2.4.1":
   version: 2.4.1
   resolution: "@parcel/watcher-android-arm64@npm:2.4.1"
@@ -1470,6 +1529,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/foundry@workspace:packages/foundry"
   dependencies:
+    "@bnb-chain/greenfield-contracts": ^1.2.0
+    "@bnb-chain/greenfield-contracts-sdk": ^1.1.0
     "@types/prettier": 2
     "@types/qrcode": 1
     dotenv: ~16.3.1
@@ -1503,6 +1564,7 @@ __metadata:
     eslint-config-next: ~14.0.4
     eslint-config-prettier: ~8.5.0
     eslint-plugin-prettier: ~4.2.1
+    framer-motion: ^11.0.23
     next: ~14.0.4
     next-themes: ~0.2.1
     nprogress: ~0.2.0
@@ -5449,6 +5511,26 @@ __metadata:
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: e1553ae3f08e3ba0e8c06e43a3ab20b319966dfb7ddb96fd9b5d0ee11a66571af7f993229c88ebbb0d4a816eb813a24ed48207b140d442a8f76f33763b8d1f3f
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^11.0.23":
+  version: 11.0.23
+  resolution: "framer-motion@npm:11.0.23"
+  dependencies:
+    tslib: ^2.4.0
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 01f1a70d4dd7262da096b9de674e0a930fac5f9675b41a700fcb41c1cdc52a3df0722f43a24e09bf68a9dcfa8b7fccbcf77bda152426f9c01b303f5bcc5f07a9
   languageName: node
   linkType: hard
 

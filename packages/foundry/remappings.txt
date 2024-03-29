@@ -1,1 +1,4 @@
 @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts
+@bnb-chain/greenfield-contracts/=node_modules/@bnb-chain/greenfield-contracts/
+@bnb-chain/greenfield-contracts-sdk/=node_modules/@bnb-chain/greenfield-contracts-sdk/
+

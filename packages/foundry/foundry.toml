@@ -28,6 +28,7 @@ zkSyncTestnet = "https://testnet.era.zksync.dev"
 zkSync = "https://mainnet.era.zksync.io"
 scrollSepolia = "https://sepolia-rpc.scroll.io"
 scroll = "https://rpc.scroll.io"
+bscTestnet = "https://data-seed-prebsc-1-s1.bnbchain.org:8545"
 
 [etherscan]
 polygonMumbai = { key = "${ETHERSCAN_API_KEY}" }
