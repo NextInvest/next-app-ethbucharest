@@ -86,6 +86,8 @@ module.exports = {
         // Replace these with the hex codes that match the gradient in your image.
         gradientGreen: '#0591DF', // A greenish color for the left side
         gradientBlue: '#05DF87', // A blue color for the right side
+        nextCardBg: '#232323',
+        nextGreen:"#05DF85"
       },
     },
   },

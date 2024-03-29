@@ -17,7 +17,7 @@ const SearchBarWithFilters: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center space-x-4 p-4 bg-green-800">
+    <div className="flex flex-wrap items-center space-x-4">
       <input
         type="text"
         placeholder="Company name, sector, city"

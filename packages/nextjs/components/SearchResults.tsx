@@ -8,7 +8,7 @@ interface CompanyCardProps {
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ logo, name, sector }) => {
   return (
-    <div className="bg-gray-800 p-4 rounded-lg">
+    <div className="bg-nextCardBg p-4 rounded-lg">
       <div className="flex items-center mb-4">
         <img src={logo} alt={`${name} logo`} className="h-10 w-10 rounded-full mr-3" />
         <div>

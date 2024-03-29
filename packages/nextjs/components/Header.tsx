@@ -49,11 +49,11 @@ export const HeaderMenuLinks = () => {
               href={href}
               passHref
               className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+                isActive ? "bg-secondary shadow-md text-green-400" : ""
+              } hover:bg-secondary hover:shadow-md hover:text-nextCardBg focus:!bg-secondary text-gray-400 active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
             >
               {icon}
-              <span>{label}</span>
+              <span className={isActive ? "text-nextCardBg" : ""}>{label}</span>
             </Link>
           </li>
         );
@@ -74,7 +74,7 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static bg-gray-800 top-0 navbar min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2 mx-auto mt-5 w-11/12 rounded-xl">
+    <div className="sticky lg:static bg-nextCardBg top-0 navbar min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-nextCardBg px-0 sm:px-2 mx-auto mt-5 rounded-xl">
       <div className="navbar-start w-auto lg:w-1/2">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
@@ -154,8 +154,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_2049_1993"
@@ -165,8 +165,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_2049_1993"
@@ -176,8 +176,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_2049_1993"
@@ -187,8 +187,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_2049_1993"
@@ -198,8 +198,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_2049_1993"
@@ -209,8 +209,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_2049_1993"
@@ -220,8 +220,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_2049_1993"
@@ -231,8 +231,8 @@ export const Logo = ({ size }: { size: { width: string; height: string } }) => {
           y2="28.2698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0591DF" />
-          <stop offset="1" stop-color="#05DF87" />
+          <stop stopColor="#0591DF" />
+          <stop offset="1" stopColor="#05DF87" />
         </linearGradient>
       </defs>
     </svg>

@@ -98,7 +98,11 @@ const StepOne: React.FC = () => {
         <button className="bg-gray-700 rounded-lg p-2">Public Goods</button>
       </div>
       <p className="mb-4">Can&rsquo;t find your favourite industry above?</p>
-      <input type="text" placeholder="Type industry here..." className="w-full p-2 rounded-lg bg-gray-800 text-white" />
+      <input
+        type="text"
+        placeholder="Type industry here..."
+        className="w-full p-2 rounded-lg bg-nextCardBg text-white"
+      />
     </div>
   );
 };
@@ -113,7 +117,7 @@ const StepTwo: React.FC = () => {
         <button className="bg-gray-700 rounded-lg p-2">Later Stage</button>
       </div>
       <p className="mb-4">Can&rsquo;t find your favorite stage above?</p>
-      <input type="text" placeholder="Type stage here..." className="w-full p-2 rounded-lg bg-gray-800 text-white" />
+      <input type="text" placeholder="Type stage here..." className="w-full p-2 rounded-lg bg-nextCardBg text-white" />
     </div>
   );
 };
@@ -131,7 +135,7 @@ const StepThree: React.FC = () => {
         <button className="bg-gray-700 rounded-lg p-2">Global</button>
       </div>
       <p className="mb-4">Can&rsquo;t find your preferred region?</p>
-      <input type="text" placeholder="Type region here..." className="w-full p-2 rounded-lg bg-gray-800 text-white" />
+      <input type="text" placeholder="Type region here..." className="w-full p-2 rounded-lg bg-nextCardBg text-white" />
     </div>
   );
 };

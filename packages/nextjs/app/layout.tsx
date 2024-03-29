@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       default: "NEXT",
       template: "%s | NEXT",
     },
-    description: "Built with 🏗 NEXT",
+    description: "We connect investors with startup",
   },
   icons: {
     icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html suppressHydrationWarning>
-      <body className="background-animate">
+    <html className="main-background" suppressHydrationWarning>
+      <body className="mx-auto w-full md:w-11/12 lg:10/12">
         <ThemeProvider enableSystem>
           <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
         </ThemeProvider>
