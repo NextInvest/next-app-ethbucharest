@@ -1,4 +1,4 @@
-export const DAPP_NAME = "NEXT_INVEST";
+export const DAPP_NAME = "NEXT_RAISE_OR_INVEST";
 export const parseGroupName = (groupName: string) => {
   let name = groupName;
   let type = "Collection";
