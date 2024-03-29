@@ -28,6 +28,11 @@ const variants = {
 
 const FormSlider: React.FC = () => {
   const [[page, direction], setPage] = useState([0, 0]);
+  const isPrevButtonDisabled = page === 0;
+  const isNextButtonDisabled = page === 3;
+
+  const prevButtonClass = isPrevButtonDisabled ? "bg-gray-200 cursor-default" : "btn btn-primary";
+  const nextButtonClass = isNextButtonDisabled ? "bg-gray-200 cursor-default" : "btn btn-primary";
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
@@ -47,17 +52,6 @@ const FormSlider: React.FC = () => {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
           }}
-          // drag="x"
-          // dragConstraints={{ left: 0, right: 0 }}
-          // dragElastic={1}
-          // onDragEnd={(_, { offset, velocity }) => {
-          //   const swipe = swipeConfidenceThreshold * velocity.x;
-          //   if (swipe < -swipeConfidenceThreshold) {
-          //     paginate(1);
-          //   } else if (swipe > swipeConfidenceThreshold) {
-          //     paginate(-1);
-          //   }
-          // }}
         >
           {page === 0 && <StepOne />}
           {page === 1 && <StepTwo />}
@@ -67,15 +61,16 @@ const FormSlider: React.FC = () => {
       </AnimatePresence>
 
       <div className="flex justify-between absolute bottom-0 left-0 right-0 p-4">
-        (
-        <button onClick={() => paginate(-1)} className="rounded bg-blue-500 text-white py-2 px-4">
+        <button
+          className={`btn btn-sm ${prevButtonClass}`}
+          disabled={isPrevButtonDisabled}
+          onClick={() => paginate(-1)}
+        >
           Back
         </button>
-        ) (
-        <button onClick={() => paginate(1)} className="rounded bg-green-500 text-white py-2 px-4">
+        <button className={`btn btn-sm ${nextButtonClass}`} disabled={isNextButtonDisabled} onClick={() => paginate(1)}>
           Next
         </button>
-        )
       </div>
 
       <div className="flex justify-center p-4">

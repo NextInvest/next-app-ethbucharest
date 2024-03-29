@@ -1,20 +1,31 @@
+import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/solid";
+
 export default function SearchBar() {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full p-4 bg-green-900">
-      <div className="flex-grow mb-4 md:mb-0">
-        <input type="text" placeholder="What are you looking for?" className="w-full p-2 rounded-l-lg" />
+    <div className="flex flex-wrap justify-between items-center w-full md:w-4/6 p-4 bg-gray-800 rounded-2xl">
+      <div className="flex-grow px-4 mb-4 md:mb-0">
+        <input type="text" placeholder="What are you looking for?" className="w-full p-2 rounded-l-lg bg-gray-800" />
       </div>
-      <div className="flex-grow mb-4 md:mb-0">
-        <input type="text" placeholder="Location" className="w-full p-2" />
+      <div className="flex-grow mb-4 px-4 md:mb-0">
+        <input type="text" placeholder="Location" className="w-full p-2 bg-gray-800" />
       </div>
-      <div className="flex-grow mb-4 md:mb-0">
-        <select className="w-full p-2 rounded-r-lg">
+      <div className="flex-grow mb-4 px-4 md:mb-0">
+        <select className="w-full p-2 rounded-r-lg bg-gray-800">
           <option value="">Categories</option>
-          {/* Add your categories here */}
         </select>
       </div>
       <div className="md:flex-grow-0">
-        <button className="w-full md:w-auto bg-green-600 text-white p-2 rounded-lg hover:bg-green-700">Search</button>
+        <button
+          type="button"
+          className="btn btn-lg rounded-[100px]
+            bg-gradient-to-r from-gradientGreen to-gradientBlue hover:bg-gradient-to-br
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gradientGreen
+            h-[4.25rem]
+            "
+        >
+          Search
+          <MagnifyingGlassCircleIcon className="-mr-8 h-[4.25rem] w-[4.25rem] text-white" aria-hidden="true" />
+        </button>
       </div>
     </div>
   );

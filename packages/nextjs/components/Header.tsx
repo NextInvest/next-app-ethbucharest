@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
+import { BanknotesIcon, Bars3Icon, BriefcaseIcon, EnvelopeIcon, HomeIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -18,11 +17,22 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/",
+    icon: <HomeIcon className="h-4 w-4" />,
   },
   {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugAntIcon className="h-4 w-4" />,
+    label: "Startups",
+    href: "/explore/startups",
+    icon: <BriefcaseIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Investors",
+    href: "/explore/investors",
+    icon: <BanknotesIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Inbox",
+    href: "/inbox",
+    icon: <EnvelopeIcon className="h-4 w-4" />,
   },
 ];
 
@@ -64,7 +74,7 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
+    <div className="sticky lg:static bg-gray-800 top-0 navbar min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2 mx-auto mt-5 w-11/12 rounded-xl">
       <div className="navbar-start w-auto lg:w-1/2">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
@@ -88,13 +98,9 @@ export const Header = () => {
             </ul>
           )}
         </div>
-        <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
-          <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-ETH</span>
-            <span className="text-xs">Ethereum dev stack</span>
+        <Link href="/" passHref className="hidden lg:flex ">
+          <div className="flex justify-center items-center w-full h-full">
+            <Logo size={{ width: "232", height: "60" }} />
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
@@ -106,5 +112,129 @@ export const Header = () => {
         <FaucetButton />
       </div>
     </div>
+  );
+};
+
+export const Logo = ({ size }: { size: { width: string; height: string } }) => {
+  const { width, height } = size;
+  return (
+    <svg width={width} height={height} viewBox="0 0 232 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0 30V0H6.77892L22.8321 19.9714H19.6297V0H27.6979V30H20.919L4.86585 10.0286H8.06816V30H0Z"
+        fill="url(#paint0_linear_2049_1993)"
+      />
+      <path
+        d="M41.0754 11.6143H54.5917V17.9571H41.0754V11.6143ZM41.6576 23.4429H56.879V30H33.5063V0H56.3384V6.55714H41.6576V23.4429Z"
+        fill="url(#paint1_linear_2049_1993)"
+      />
+      <path
+        d="M58.2105 30L70.9366 11.7857L70.895 17.8286L58.668 0H67.9422L75.7608 11.6143L71.8099 11.6571L79.5038 0H88.4037L76.1767 17.4857V11.4857L89.0691 30H79.587L71.6436 17.7857H75.4281L67.6095 30H58.2105Z"
+        fill="url(#paint2_linear_2049_1993)"
+      />
+      <path d="M98.8655 30V6.72857H89.924V0H116V6.72857H107.1V30H98.8655Z" fill="url(#paint3_linear_2049_1993)" />
+      <path
+        d="M0 30V0H6.77892L22.8321 19.9714H19.6297V0H27.6979V30H20.919L4.86585 10.0286H8.06816V30H0Z"
+        fill="url(#paint4_linear_2049_1993)"
+      />
+      <path
+        d="M41.0754 11.6143H54.5917V17.9571H41.0754V11.6143ZM41.6576 23.4429H56.879V30H33.5063V0H56.3384V6.55714H41.6576V23.4429Z"
+        fill="url(#paint5_linear_2049_1993)"
+      />
+      <path
+        d="M58.2105 30L70.9366 11.7857L70.895 17.8286L58.668 0H67.9422L75.7608 11.6143L71.8099 11.6571L79.5038 0H88.4037L76.1767 17.4857V11.4857L89.0691 30H79.587L71.6436 17.7857H75.4281L67.6095 30H58.2105Z"
+        fill="url(#paint6_linear_2049_1993)"
+      />
+      <path d="M98.8655 30V6.72857H89.924V0H116V6.72857H107.1V30H98.8655Z" fill="url(#paint7_linear_2049_1993)" />
+      <defs>
+        <linearGradient
+          id="paint0_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint5_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint6_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+        <linearGradient
+          id="paint7_linear_2049_1993"
+          x1="112.702"
+          y1="0.697662"
+          x2="-1.99218"
+          y2="28.2698"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0591DF" />
+          <stop offset="1" stop-color="#05DF87" />
+        </linearGradient>
+      </defs>
+    </svg>
   );
 };

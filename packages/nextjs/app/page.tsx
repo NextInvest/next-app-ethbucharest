@@ -1,5 +1,3 @@
-"use client";
-
 // import Link from "next/link";
 // import type { NextPage } from "next";
 // import { useAccount } from "wagmi";
@@ -65,62 +63,22 @@
 //   );
 // };
 // export default Home;
-import { useState } from "react";
-import Head from "next/head";
 import SearchBar from "../components/SearchBar";
-import Modal from "~~/components/SignUpModal";
 
 export default function Home() {
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>FIND USEFUL INVESTMENTS</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      </Head> */}
 
-      <header className="bg-green-900 text-white">
-        <div className="container mx-auto p-5">
-          <nav className="flex justify-between items-center">
-            <a href="#" className="text-xl font-bold">
-              NEXT.
-            </a>
-            <div className="hidden md:flex space-x-4">
-              {/* Navigation Links */}
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-              <a href="#" className="hover:underline">
-                DAO
-              </a>
-              <a href="#" className="hover:underline">
-                Wallet
-              </a>
-              <a href="#" className="hover:underline">
-                Startups
-              </a>
-              <a href="#" className="hover:underline">
-                Inbox
-              </a>
-            </div>
-            <div className="flex space-x-4">
-              <a href="#" className="md:hidden hover:underline">
-                Menu
-              </a>
-              <button className="hover:underline" onClick={() => setModalOpen(true)}>
-                Sign up
-              </button>
-            </div>
-          </nav>
-        </div>
-      </header>
-      {isModalOpen && <Modal onClose={() => setModalOpen(false)} />}
-      <main className="bg-green-800 text-white text-center py-20 px-4">
+      <div className="text-white text-center py-20 px-4">
         <h1 className="text-5xl font-bold mb-6">FIND USEFUL INVESTMENTS</h1>
         <SearchBar />
         <p className="mt-6">Schedule a call with an investor with just a few clicks</p>
         <button className="bg-green-600 mt-4 px-6 py-3 rounded-full font-bold hover:bg-green-700">Book a pitch</button>
-      </main>
+      </div>
     </>
   );
 }

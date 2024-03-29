@@ -81,6 +81,12 @@ module.exports = {
       animation: {
         "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
+      colors: {
+        // Define the colors for the gradient here.
+        // Replace these with the hex codes that match the gradient in your image.
+        gradientGreen: '#0591DF', // A greenish color for the left side
+        gradientBlue: '#05DF87', // A blue color for the right side
+      },
     },
   },
 };
