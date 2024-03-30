@@ -133,7 +133,14 @@ export const Header = () => {
 export const Logo = ({ size }: { size: { width: string; height: string } }) => {
   const { width, height } = size;
   return (
-    <svg width={width} height={height} viewBox="0 0 232 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={height}
+      className="pl-10"
+      viewBox="0 0 232 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M0 30V0H6.77892L22.8321 19.9714H19.6297V0H27.6979V30H20.919L4.86585 10.0286H8.06816V30H0Z"
         fill="url(#paint0_linear_2049_1993)"

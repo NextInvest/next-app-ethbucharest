@@ -1,6 +1,7 @@
 import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/solid";
 
 export default function SearchBar() {
+  const industries = ["Technology", "Healthcare", "FinTech", "Consumer Goods", "Education", "Public Goods"];
   return (
     <div className="flex flex-wrap justify-between items-center w-full md:w-4/6 bg-nextCardBg rounded-2xl">
       <div className="flex-grow px-4 mb-4 md:mb-0">
@@ -11,7 +12,11 @@ export default function SearchBar() {
       </div>
       <div className="flex-grow mb-4 px-4 md:mb-0">
         <select className="w-full p-2 rounded-r-lg bg-nextCardBg">
-          <option value="">Categories</option>
+          {industries.map((v, i) => (
+            <option key={i} value={v.toLowerCase()}>
+              {v}
+            </option>
+          ))}
         </select>
       </div>
       <div className="md:flex-grow-0">
