@@ -1,9 +1,9 @@
 "use client";
 
-import SearchBarWithFilters from "./_components/SearchBarWithFilters";
+import SearchBarWithFilters from "../_components/SearchBarWithFilters";
 import SearchResults from "~~/components/SearchResults";
 
-const Explore = () => {
+const ExploreStartups = () => {
   return (
     <div className="container mx-auto p-4">
       <SearchBarWithFilters />
@@ -12,4 +12,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default ExploreStartups;

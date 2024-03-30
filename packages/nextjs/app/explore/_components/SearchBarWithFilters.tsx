@@ -21,12 +21,12 @@ const SearchBarWithFilters: React.FC = () => {
       <input
         type="text"
         placeholder="Company name, sector, city"
-        className="flex-grow p-2 rounded-lg"
+        className="flex-grow p-2 rounded-lg bg-nextCardBg"
         value={searchQuery}
         onChange={e => setSearchQuery(e.target.value)}
       />
       <select
-        className="p-2 rounded-lg bg-gray-700 text-white"
+        className="p-2 rounded-lg bg-nextCardBg text-white"
         value={selectedCountry}
         onChange={e => setSelectedCountry(e.target.value)}
       >
@@ -37,7 +37,7 @@ const SearchBarWithFilters: React.FC = () => {
         ))}
       </select>
       <select
-        className="p-2 rounded-lg bg-gray-700 text-white"
+        className="p-2 rounded-lg bg-nextCardBg text-white"
         value={selectedCity}
         onChange={e => setSelectedCity(e.target.value)}
       >
@@ -48,7 +48,7 @@ const SearchBarWithFilters: React.FC = () => {
         ))}
       </select>
       <select
-        className="p-2 rounded-lg bg-gray-700 text-white"
+        className="p-2 rounded-lg bg-nextCardBg text-white"
         value={selectedSector}
         onChange={e => setSelectedSector(e.target.value)}
       >
