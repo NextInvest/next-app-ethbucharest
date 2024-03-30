@@ -46,13 +46,13 @@ export const RainbowKitCustomConnectButton = () => {
     if (isConnected && address) {
       checkUserAccount(address);
     }
-  }, [isConnected, address]);
+  }, [isConnected, address, checkUserAccount]);
 
   useEffect(() => {
     if (isConnected && !userHasAccount && !isCheckingAccount) {
       push("/signup");
     }
-  }, [isConnected, userHasAccount, isCheckingAccount]);
+  }, [isConnected, userHasAccount, isCheckingAccount, push]);
 
   // const handleConnect = async (openConnectModal: () => void, address: string) => {
   //   setIsLoading(true);
