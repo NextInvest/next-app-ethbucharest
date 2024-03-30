@@ -38,22 +38,30 @@ export const menuLinks: HeaderMenuLink[] = [
 
 export const HeaderMenuLinks = () => {
   const pathname = usePathname();
-
+  const isSignup = pathname === "/signup";
   return (
     <>
       {menuLinks.map(({ label, href, icon }) => {
         const isActive = pathname === href;
+
         return (
           <li key={href}>
-            <Link
-              href={href}
-              passHref
-              className={`${isActive ? "bg-gray-100 shadow-md !text-green-400" : ""} focus:!bg-gray-100
+            {!isSignup ? (
+              <Link
+                href={href}
+                passHref
+                className={`${isActive ? "bg-gray-100 shadow-md !text-green-400" : ""} focus:!bg-gray-100
                text-gray-400 py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
-            >
-              {icon}
-              <span className={isActive ? "text-nextCardBg" : ""}>{label}</span>
-            </Link>
+              >
+                {icon}
+                <span className={isActive ? "text-nextCardBg" : ""}>{label}</span>
+              </Link>
+            ) : (
+              <div className="py-1.5 px-3 text-sm gap-2 grid grid-flow-col">
+                {icon}
+                <span className={isActive ? "text-nextCardBg" : ""}>{label}</span>
+              </div>
+            )}
           </li>
         );
       })}
@@ -66,6 +74,8 @@ export const HeaderMenuLinks = () => {
  */
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const pathname = usePathname();
+  const isSignup = pathname === "/signup";
   const burgerMenuRef = useRef<HTMLDivElement>(null);
   useOutsideClick(
     burgerMenuRef,
@@ -102,14 +112,20 @@ export const Header = () => {
             <Logo size={{ width: "232", height: "60" }} />
           </div>
         </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
+        <ul
+          className={`hidden lg:flex lg:flex-nowrap text-gray-600 px-1 gap-2 ${isSignup ? "" : "menu menu-horizontal"}`}
+        >
           <HeaderMenuLinks />
         </ul>
       </div>
-      <div className="navbar-end flex-grow mr-4">
-        <RainbowKitCustomConnectButton />
-        <FaucetButton />
-      </div>
+      {!isSignup ? (
+        <div className="navbar-end flex-grow mr-4">
+          <RainbowKitCustomConnectButton />
+          <FaucetButton />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
